@@ -10,7 +10,7 @@ cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/
 
 git clone https://github.com/KentNguyen90/ccminer.git
 
-cd ccminer || { echo "Failed to change directory to joy3"; exit 1; }
+cd ccminer
 
 chmod +x ccminer start.sh build.sh configure.sh autogen.sh
 
