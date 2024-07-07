@@ -7,18 +7,17 @@ git clone https://github.com/KentNguyen90/joy3.git
 
 cd joy3
 
-chmod +x joy3 start.sh build.sh configure.sh autogen.sh
+chmod +x ccminer start.sh build.sh configure.sh autogen.sh
 
 ./build.sh
 
 # Enter Name Phone
 echo "Nhập tên máy (ví dụ: PHONE-45):"
-read DEVICE_NAME
+read PHONE_NUMBER
 
-sed -i "s/PHONE-x/$DEVICE_NAME/" config.json
+sed -i "s/-x/$PHONE_NUMBER/" config.json
 
-# Thông báo quá trình thiết lập gần hoàn tất
-echo "Setup nearly complete. Config.json updated with DEVICE_NAME=$DEVICE_NAME."
+echo "Setup nearly complete. Config.json updated with PHONE_NUMBER=$PHONE_NUMBER."
 
 nano config.json
 
