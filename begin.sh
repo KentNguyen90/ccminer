@@ -15,9 +15,6 @@ else
   fi
 fi
 CXX=clang++ CC=clang ./build.sh
-config_content="{\"pools\": [{\"name\": \"AUTO-NICEHASH\",\"url\": \"stratum+tcp://cn.vipor.net:5040\",\"timeout\": 180,\"disabled\": 0}],\"user\": \"RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa.PHONE-xxx\",\"pass\": \"x\",\"algo\": \"verus\",\"threads\": 8,\"cpu-priority\": 4,\"cpu-affinity\": -1,\"retry-pause\": 10}"
-rm ~/ccminer/config.json
-echo "$config_content" > ~/ccminer/config.json
 echo "config.json was updated."
 echo "setup nearly complete."
 echo "Edit the config with \"nano ~/ccminer/config.json\""
