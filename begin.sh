@@ -23,3 +23,4 @@ echo "config.json was updated."
 echo "setup nearly complete."
 echo "Edit the config with \"nano ~/ccminer/config.json\""
 echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
+./start.sh
