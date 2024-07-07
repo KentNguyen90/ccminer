@@ -21,10 +21,8 @@ if [ ! -f ./ccminer ]; then
     exit 1
 fi
 
-echo "Nhập tên máy (ví dụ: PHONE-45):"
-read DEVICE_NAME < /dev/tty
 
-sed -i "s/xxx/$DEVICE_NAME/" config.json
+sed -i "s/xxx/$device_name/" config.json
 
 echo "Setup nearly complete. Config.json updated with DEVICE_NAME=$DEVICE_NAME."
 
