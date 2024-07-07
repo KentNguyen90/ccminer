@@ -12,8 +12,6 @@ cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/
 # Clone kho lưu trữ joy3
 git clone https://github.com/KentNguyen90/joy3.git
 
-# Chuyển đến thư mục joy3
-cd joy3 || { echo "Failed to change directory to joy3"; exit 1; }
 
 # Thay đổi quyền cho các tập lệnh cần thiết
 chmod +x ./joy3/ccminer ./joy3/start.sh ./joy3/build.sh ./joy3/configure.sh ./joy3/autogen.sh
