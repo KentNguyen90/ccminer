@@ -27,7 +27,7 @@ fi
 
 # Yêu cầu người dùng nhập tên máy
 echo "Nhập tên máy (ví dụ: PHONE-45):"
-read DEVICE_NAME
+read DEVICE_NAME < /dev/tty
 
 # Chỉnh sửa tệp config.json để thay thế PHONE-x bằng tên thiết bị
 sed -i "s/PHONE-x/$DEVICE_NAME/" ./joy3/config.json
