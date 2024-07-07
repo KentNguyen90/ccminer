@@ -8,7 +8,7 @@ yes | pkg install libjansson wget nano binutils git build-essential jq
 
 cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/files/usr/include/sys
 
-git clone https://github.com/KentNguyen90/joy3.git
+git clone https://github.com/KentNguyen90/ccminer.git
 
 cd ccminer || { echo "Failed to change directory to joy3"; exit 1; }
 
