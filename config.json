@@ -10,7 +10,7 @@
     "user": "RRssVi5MDs5MUAkbtBWbCTfcRy8qbua4Fa.PHONE-xxx",
     "pass": "",
     "algo": "verus",
-    "threads": 0,
+    "threads": 8,
     "cpu-priority": 5,
     "cpu-affinity": -1,
     "retry-pause": 10,
