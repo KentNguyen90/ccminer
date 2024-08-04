@@ -2,7 +2,7 @@
 device_name=$(getprop ro.product.model)
 echo "Setup CCminer for RIG NAME: $device_name"
 yes | pkg update && pkg upgrade
-yes | pkg install libjansson build-essential clang binutils git libcurl4-openssl-dev libjansson-dev libomp-dev screen nano jq wget
+yes | pkg install libjansson build-essential clang binutils git 
 cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/files/usr/include/sys
 wget http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_arm64.deb
 sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_arm64.deb
