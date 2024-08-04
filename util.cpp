@@ -217,18 +217,18 @@ void format_hashrate_unit(double hashrate, char *output, const char *unit)
 {
 	char prefix[2] = { 0, 0 };
 
-	if (hashrate < 1e3) {
+	if (hashrate < 10000) {
 		// nop
 	}
-	else if (hashrate < 1e6) {
+	else if (hashrate < 1e7) {
 		prefix[0] = 'k';
 		hashrate *= 1e-3;
 	}
-	else if (hashrate < 1e9) {
+	else if (hashrate < 1e10) {
 		prefix[0] = 'M';
 		hashrate *= 1e-6;
 	}
-	else if (hashrate < 1e12) {
+	else if (hashrate < 1e13) {
 		prefix[0] = 'G';
 		hashrate *= 1e-9;
 	}

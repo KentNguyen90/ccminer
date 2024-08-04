@@ -8,7 +8,6 @@
 
 //#include "compat/endian.h"
 
-#include <endian.h>
 #include <algorithm>
 #include <assert.h>
 #include <ios>

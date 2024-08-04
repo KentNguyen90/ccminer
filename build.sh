@@ -13,4 +13,4 @@ rm -f config.status
 #CFLAGS="-O3" ./configure
 ./configure.sh
 
-make -j$(nproc)
+make
