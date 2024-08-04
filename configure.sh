@@ -1,6 +1,8 @@
-# To change the cuda arch, edit Makefile.am and run ./build.sh
+#!/bin/bash
 
-extracflags="-O3 -ffinite-loops -ffast-math -mfix-cortex-a53-835769 -D_REENTRANT -falign-functions=16 -fomit-frame-pointer -fpic -pthread -flto -fuse-ld=lld -fno-stack-protector"
+ARCH="-march=armv8-a+crypto+sha2+crc"
+CORE="-mtune=cortex-a73 -mtune=cortex-a53"
+OPTI="-Ofast -pthread -fopenmp -flto -fstrict-aliasing -ftree-vectorize -funroll-loops -ffinite-loops -finline-functions -fno-stack-protector -fomit-frame-pointer -fpic -falign-functions=64 -D_REENTRANT"
 
-./configure CXXFLAGS="-Rpass-missed=loop-vectorize -Rpass-analysis=loop-vectorize -Wl,-hugetlbfs-align -funroll-loops -finline-functions $extracflags -march=armv8-a+crypto -mtune=cortex-a53" CFLAGS="-finline-functions -Wl,-hugetlbfs-align -march=armv8-a+crypto -mtune=cortex-a53  -Rpass-missed=loop-vectorize -Rpass-analysis=loop-vectorize  $extracflags -mllvm -enable-loop-distribute"   CXX=clang++ CC=clang LDFLAGS="-v -flto  -Wl,-hugetlbfs-align" 
-
+./configure CXXFLAGS="$ARCH $CORE $OPTI" CFLAGS="$ARCH $CORE $OPTI" \
+CXX=clang++ CC=clang  LDFLAGS="-Wl,-hugetlbfs-align -fuse-ld=lld"

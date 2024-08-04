@@ -15,6 +15,7 @@
 //# include <winsock2.h>
 #endif
 
+#include <pthread.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -227,7 +228,7 @@ static char *getpoolnfo(char *params)
 	*s = '\0';
 
 	if (stratum.job.job_id)
-		strncpy(jobid, stratum.job.job_id, sizeof(stratum.job.job_id));
+		strncpy(jobid, stratum.job.job_id, sizeof(stratum.job.job_id) - 1);
 	if (stratum.job.xnonce2) {
 		/* used temporary to be sure all is ok */
 		sprintf(extra, "0x");
@@ -1077,7 +1078,9 @@ static void *mcast_thread(void *userdata)
 	struct thr_info *mythr = (struct thr_info *)userdata;
 
 	pthread_detach(pthread_self());
+#if !(defined(__ANDROID__) || (__ANDROID_API__ > 23))
 	pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+#endif
 
 	mcast();
 
