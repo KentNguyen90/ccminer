@@ -1,7 +1,7 @@
 #!/bin/sh
 
-CONFIG_URL="https://raw.githubusercontent.com/KentNguyen90/ccminer/refs/heads/main/config.json"
-curl -L -o ~/ccminer/config.json "$CONFIG_URL"
+#CONFIG_URL="https://raw.githubusercontent.com/KentNguyen90/ccminer/refs/heads/main/config.json"
+#curl -L -o ~/ccminer/config.json "$CONFIG_URL"
 if [ $? -eq 0 ]; then
     echo "Đã cập nhật config.json thành công."
 else
